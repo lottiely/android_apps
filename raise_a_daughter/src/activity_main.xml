@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/titlescreen"
+    tools:context="com.example.sweethotchocolate.raiseadaughter.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:id="@+id/startbutton"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:onClick="startClick"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/textbox"
+        android:id="@+id/textbox"
+        android:layout_marginTop="206dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/story_text"
+        android:includeFontPadding="false"
+        android:paddingLeft="65dp"
+        android:paddingRight="30dp"
+        android:layout_above="@+id/startbutton"
+        android:layout_marginTop="350dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"
+        android:textSize="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textSize="20dp"
+        android:id="@+id/prompt"
+        android:text="What would you like to name your daughter?"
+        android:textColor="#696969"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/daughternametextfield"
+        android:layout_below="@id/prompt"
+        android:hint="Enter daughter's name"
+        android:visibility="invisible"
+        android:paddingTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textSize="20dp"
+        android:id="@+id/prompt2"
+        android:text="What would you like your daughter to call you?"
+        android:textColor="#696969"
+        android:layout_below="@id/daughternametextfield"
+        android:paddingTop="40dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enteryourname"
+        android:layout_below="@id/prompt2"
+        android:hint="Enter your nickname"
+        android:visibility="invisible"
+        android:paddingTop="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Okay"
+        android:layout_below="@id/enteryourname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/send"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:onClick="confirmNames"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:layout_below="@id/enteryourname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/yes"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:onClick="makeButtonsInvisible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:layout_toRightOf="@id/yes"
+        android:layout_alignBottom="@id/yes"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/no"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:onClick="cancelClick"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magical Time Unit:  0"
+        android:textColor="#696969"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        android:id="@+id/timeunit"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:text="Photo Album"
+        android:id="@+id/photoalbum"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="photoAlbum"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:text="Next"
+        android:id="@+id/next"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="nextPicture"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:text="Back"
+        android:id="@+id/back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="backPicture"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:text="Room"
+        android:id="@+id/room"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:onClick="returnToGameClick"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="75dp"
+        android:background="@android:color/transparent"
+        android:layout_alignRight="@+id/story_text"
+        android:layout_alignEnd="@+id/story_text"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"
+        android:onClick="closet"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:text="Yes"
+        android:id="@+id/closetyes"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:onClick="incrementClosetCount"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:text="No"
+        android:id="@+id/closetno"
+        android:layout_toRightOf="@id/closetyes"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@id/closetyes"
+        android:onClick="returnToGameClick"/>
+
+
+
+</RelativeLayout>
