@@ -1,2 +1,0 @@
-Testing how to merge two branches without affecting the master. Useless 
-for the codebase, but I need the practice.
